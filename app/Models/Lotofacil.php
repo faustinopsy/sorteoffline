@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lotofacil extends Model
 {
+    protected $table='lotofacil';
     use HasFactory;
 }
