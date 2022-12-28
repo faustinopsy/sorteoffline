@@ -33,7 +33,9 @@ Route::get('/repetidos-lotofacil/{concurso}', function () {
     return view('lotofacil/sorteio');
 });
 
-Route::post('/combinacoes-lotofacil', [LotofacilController::class, 'combinacoesltf'])->name('lotofacil.combinacoesltf');
+Route::post('/combinacoes-lotofacil', function () {
+    return view('lotofacil/ganhadores-lotofacil');
+});
 Route::get('/sorteios-lotofacil', function () {
     return view('lotofacil/sorteios-lotofacil');
 });
