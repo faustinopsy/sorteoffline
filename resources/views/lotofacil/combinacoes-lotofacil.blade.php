@@ -150,6 +150,7 @@
     </div>
 </div>
 <form method="post" action="combinacoes-lotofacil" > 
+  @csrf
     <div class="container">
      <button type="submit" name="submit" id="insere" >Gerar combinações</button><p>
 <div class="container">
@@ -203,11 +204,11 @@
 <script>
 
 let gerador;
-gerador= 17;
+gerador= 18;
    function numeros(){
     let gerador;
        gerador= document.querySelector("#numeros").value;
-       gerador= 17;
+       gerador= 18;
        //gerador= document.getElementById("numeros").value;
        //gerador= document.getElementById("numeros").value;
    } 

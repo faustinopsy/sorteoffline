@@ -73,8 +73,11 @@ class LotofacilController extends Controller
         //return Response()->json($lotofacil);
       }
       public function combinacoesltf(Request $request){
-        
-        //return view('/lotofacil/combinacoesltf', array('lotofacil' => $novo));
-        return view('/lotofacil/combinacoesltf');
+        $gerador = $request->input('numeros');
+        $data = $request->input('data');
+        $retorno=[];
+        $retorno[]=Lotofacil::combinacoes($gerador, $data);
+        return $retorno;
       }
+      
 }
